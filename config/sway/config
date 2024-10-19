@@ -91,10 +91,10 @@ titlebar_border_thickness 0
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym alt+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
-    bindsym alt+space exec $menu
+    bindsym $mod+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -135,6 +135,14 @@ titlebar_border_thickness 0
 #
 # Workspaces:
 #
+    #WORKSPACES
+    workspace 1 output eDP-1
+    workspace 2 output eDP-2
+    workspace 3 output eDP-3
+    workspace 4 output eDP-4
+
+    assign [app_id="2foot"] workspace 1
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -146,6 +154,7 @@ titlebar_border_thickness 0
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
+
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -177,10 +186,10 @@ titlebar_border_thickness 0
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+return floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+tab focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -218,6 +227,7 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
