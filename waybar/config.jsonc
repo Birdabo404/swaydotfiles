@@ -1,0 +1,128 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-bottom": 0,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/window"
+  ],
+  "modules-center": [
+  ],
+  "modules-right": [
+    "temperature",
+    "memory",
+    "cpu",
+    "pulseaudio",
+    "battery",
+    "network",
+    "clock"
+  ],
+  "custom/separator": {
+    "exec": "echo \"|\"",
+    "format": "{}"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+  "clock": {
+    // 24 hour
+    // "format": " {:%H:%M} ",
+    // 12 hour
+    "format": "{:%I:%M %p}",
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "{:%d %B %H:%M}"
+  },
+"sway/workspaces": {
+    "format": "{icon}",
+    "separate-outputs": false,
+    "active-only": false,
+    "all-outputs": true,
+    "format-icons": {
+        "1": "🌱",
+        "2": "🍃",
+        "3": "🌿",
+        "4": "🍂",       
+        "5": "五",
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九",
+        "10": "十"
+    },
+    "persistent_workspaces": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null
+    }
+},
+  "sway/window": {
+        "format": "{app_id}",  // or whatever format you prefer
+        "max-length": 50,
+        "rewrite": {
+            "(.*) - Mozilla Firefox": "🦊 $1",
+            "(.*) - Chromium": "󰊯 $1",
+            "(.*) - Zen Browser": "🦊 $1"
+       },
+        "tooltip": true
+    },
+  "network": {
+    "format": "",
+    // "tooltip": "{ifname}",
+    "tooltip-format": "{essid}",
+    "interval": 0.5
+  },
+  "temperature": {
+    "interval": 1,
+    "format": "{icon} {temperatureC}°C ",
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "memory": {
+    "format": "RAM:{used:0.1f}GB",
+    "interval": 0.5,
+    "tooltip": true,
+    "tooltip-format": "Used: {used:0.1f}GB\nAvailable: {avail:0.1f}GB\nTotal: {total:0.1f}GB"
+  },
+  "cpu": {
+    "interval": 3,
+    "format": "CPU:{usage}% ",
+    "tooltip": "false"
+  },
+  "pulseaudio": {
+    "format": "VOL:{volume}%",
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "interval": 1,
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% ",
+    "format-charging": "{capacity}% + ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""],
+    "icon-size": 10,   
+    "on-update": "",
+    "tooltip": true
+},
+"battery#bat2": {
+    "bat": "BAT2",
+    "interval": 1 
+	},
+
+}
