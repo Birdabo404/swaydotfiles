@@ -4,7 +4,7 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
+    background-color: #000000; /*rgba(43, 48, 59, 0.5);*/ 
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
@@ -84,7 +84,7 @@ button:hover {
 #temperature,
 #backlight,
 #network,
-#pulseaudio,
+#pulseaudio,
 #wireplumber,
 #custom-media,
 #tray,
@@ -113,19 +113,19 @@ button:hover {
 }
 
 #clock {
-    background-color: rgba(43, 48, 59, 0.5);
+    background-color: #000000;/*rgba(43, 48, 59, 0.5);*/
     font-weight: 700;
 }
 
 #battery {
-    background-color: rgba(43, 48, 59, 0.5);;
+    background-color: #000000;
     color: #ffffff;
     font-weight: 700;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #00FF00;
+    background-color: #000000;
 }
 
 @keyframes blink {
@@ -170,16 +170,16 @@ label:focus {
 }
 
 #cpu {
-    background-color: rgba(43, 48, 59, 0.5);
-    color: #00FF00;
+    background-color: #000000; 
+    color: #FFFFFF; /*#00FF00;*/
     font-weight: 700;
 }
 
 #memory {
-    background-color: rgba(43, 48, 59, 0.5);
+    background-color: #000000;
     /*#007BFF;*/
     font-weight: 700; 
-    color: #007BFF; /* Bright blue */
+    color: #FFFFFF; /*#007BFF;  Bright blue */
     
 }
 
@@ -192,17 +192,20 @@ label:focus {
 }
 
 #network {
-    background-color: rgba(43, 48, 59, 0.5);
-    color: #00BFFF;
+    background-color: #000000;
+    color: #FFFFFF;/*#00BFFF;*/
 }
 
 #network.disconnected {
     background-color: #f53c3c;
 }
 
+#network.disabled {
+    color: #FF2C2C;
+}
 #pulseaudio {
-    background-color: rgba(43, 48, 59, 0.5);
-    color: #FFFF00;
+    background-color: #000000;
+    color: #FFFFFF; /*#FFFF00;*/
     font-weight: 700;
 }
 
@@ -235,8 +238,8 @@ label:focus {
 }
 
 #temperature {
-    background-color: rgba(42, 48, 59, 0.5);
-    color: #FF7F00;
+    background-color: #000000;
+    color: #FFFFFF; /*#FF7F00;*/
     font-weight: 700;
     
 }
@@ -246,7 +249,7 @@ label:focus {
 }
 
 #tray {
-    background-color: rgba(43, 48, 59, 0.5);
+    background-color: #000000;
 }
 
 #tray > .passive {
