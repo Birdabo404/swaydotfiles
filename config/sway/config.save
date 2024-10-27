@@ -91,10 +91,10 @@ titlebar_border_thickness 0
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym alt+q kill
+    bindsym altX+q kill
 
     # Start your launcher
-    bindsym alt+space exec $menu
+    bindsym $mod+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -230,9 +230,6 @@ mode "resize" {
     bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
-
-#IDK BUT I NEED IT
-exec_always --no-startup-id nm-applet --indicator
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
